@@ -1,7 +1,7 @@
 let squareArea = document.querySelector("#squarearea");
 let squareCount = parseInt(Math.random()*21)+30; //30-50
 document.querySelector('#add').onclick = addSquare;
-document.querySelectorAll('#changecolor').onclick = changeColor;
+document.querySelector('#changecolor').onclick = changeColor;
 
 function addSquare(){
     let square = document.createElement("div");
@@ -18,7 +18,11 @@ for(let i = 0; i < squareCount; i++){
 }
 
 function changeColor(){
-    
+    let squares = document.querySelectorAll(".square");
+
+    for(let i = 0; i < squares.length; i++){
+        squares[i].style.backgroundColor = getRandomColor();
+    }
 }
 
 function getRandomColor(){

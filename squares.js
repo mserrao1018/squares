@@ -12,10 +12,11 @@ function addSquare(){
     squareArea.append(square);
 }
 
-
-for(let i = 0; i < squareCount; i++){
-    addSquare();
-}
+window.onload = function(){
+    for(let i = 0; i < squareCount; i++){
+        addSquare();
+    }
+};
 
 function changeColor(){
     let squares = document.querySelectorAll(".square");

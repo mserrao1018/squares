@@ -9,6 +9,8 @@ let topSquare = null;
 function addSquare(){
     let square = document.createElement("div");
     square.className = "square";
+    square.style.width = parseInt(Math.random()*11)+45+"px"; //45-55
+    square.style.height = parseInt(Math.random()*11)+45+"px";
     square.style.backgroundColor=getRandomColor();
     square.style.top = parseInt(Math.random()*(300-50))+"px";
     square.style.left = parseInt(Math.random()*(700-50))+"px";
